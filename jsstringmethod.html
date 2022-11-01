@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Js String Method</title>
+  <style type="text/css">
+    
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1 id="mm">Myanmar</h1>
+    <h1 id="th">Thailand</h1>
+  </div>
+ 
+
+
+ <script type="text/javascript">
+ 	
+ 	// string Method
+
+ 	let val = "maung maung";
+ 	let lv = " kyaw";
+ 	console.log(val);
+ 	console.log(val.length);
+
+ 	let nm = val + lv;
+ 	console.log(nm);
+
+ 	val += lv;
+ 	console.log(val);
+
+ 	var firstname = "zayar ";
+ 	var lastname = "kyaw";
+ 	var fullname = firstname.concat(lastname)
+
+ 	console.log(fullname);
+
+    // string is Character Array in Js
+    console.log(fullname[4]);
+
+    // console.log(fullname.length-1);
+     console.log(fullname[fullname.length-2]);
+
+     // charAt();
+      console.log(fullname.charAt(0));
+      console.log(fullname.charAt(fullname.length-1));
+
+      // include
+
+      let fav = "My fav color is black color";
+      console.log(fav.includes("black"));
+      // console.log(fav.includes("blue"));
+      // console.log(fav.includes('bla'));
+      // console.log(fav.includes("BLACK"));
+      console.log(fav.includes("Black"));
+
+      // replace(old,new)
+
+      console.log(fav.replace("black","blue"));
+      console.log(fav.replace("bla","blue"));
+      console.log(fav.replace("color","parpar")); //result = My fav parpar is black color
+
+      // substring(index,length)
+
+      console.log(fav.substring(0,5)+"...");
+      console.log(fav.substring(0,5).concat("..."));
+
+      // Change Case
+
+      console.log(fav.toUpperCase());
+      console.log(fav.toLowerCase());
+
+      //Useful style
+      document.getElementById("mm").style.color = "green";
+      document.getElementById("th").style.color = "blue";
+      document.getElementById('th').style.fontSize = "50px";
+      // document.getElementById('th').style.display = "none";
+ </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Template String</title>
+</head>
+
+<body>
+
+
+
+
+
+	<script type="text/javascript">
+
+
+		const name = "kyaw Kyaw",
+				age = 24,
+				city = "mandalay",
+				job = "developer";
+
+		// console.log(name);
+
+		let abc;
+
+		// html = '<ul><li>Name: '+name+'</li><li>Age: '+age+'</li><li>City: '+city+'</li><li>Job: '+job+'</li></ul>';\
+
+		// abc = '<ul><li>Name: '+name+'</li><li>Age: '+age+'</li><li>City: '+city+'</li><li>Job: '+job+'</li></ul>';
+
+		// abc = '<ul>'+
+		// 	'<li>Name: '+name+'</li>'+
+		// 	'<li>Age: '+age+'</li>'+
+		// 	'<li>City: '+city+'</li>'+
+		// 	'<li>Job: '+job+'</li>'+'</ul>';
+
+		abc = `
+			<ul>
+				<li>Name: ${name}</li>
+				<li>Age: ${age}</li>
+				<li>City: ${city}</li>
+				<li>Job: ${job}</li>
+			</ul>
+		`
+
+
+
+
+		document.write(abc);
+
+			// Without Template String
+
+			// With Template String
+	</script>
+</body>
+</html>

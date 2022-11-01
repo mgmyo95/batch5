@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function</title>
+  <style type="text/css">
+    *{
+      box-sizing:border-box;
+    }
+    .box{
+      width:300px;
+      height:200px;
+      background-color:#f4f4f4;
+      padding:10px;
+      box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+    }
+    label{
+      display:block;
+      margin-bottom:5px;
+    }
+   .form-control{
+    width:100%;
+    display:block;
+    padding:5px;
+    margin-bottom:5px;
+   }
+   .btn{
+    width:100%;
+    font-size:16px;
+    background-color:darkblue;
+    color:#fff;
+    border:0;
+    padding:3px;
+   }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h3>Get Name = <span id="fullname">Test</span></h3>
+
+  <!-- <form action="" method=""> -->
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" class="form-control">
+    <button class="btn" onclick="getdata()">Get Name</button>
+  <!-- </form> -->
+  </div>
+  <hr/>
+  
+
+  <script type="text/javascript">
+  	// function  declarations
+
+  	// function name(){
+  	// 	code to be executed
+  	// }
+
+  	// name()
+
+
+
+       //1 Manual function
+
+       function greet(){
+       	console.log("Hello Myanmar");
+       	console.log("Hello Thailand");
+       	console.log("Hello Indonesia")
+       }
+
+       greet();
+       greet();
+
+ //________________      
+
+
+       // function hello(){
+       // 	console.log("Hello Yangon")
+       // }
+       // hello();
+
+       //   function hello(){
+       // 	window.alert("Hello Yangon")
+       // 	window.alert("Hello Mandalay")
+       // 	window.alert("Hello Bago")
+       // }
+       // hello();
+       // hello();
+
+
+       // function hello(){
+       // 	document.write("Hello Yangon")
+       // 	document.write("Hello Mandalay")
+       // 	document.write("Hello Bago")
+       // 	document.write("<hr/>")
+       // }
+
+       // hello()
+       // hello()
+
+ //___________________      
+
+       function funone(){
+       	console.log("i am function one");
+       }
+
+       function funtwo(){
+       	console.log("i am function two");
+
+       	funone();
+       	funthree();
+       }
+
+       function funthree(){
+       	console.log("i am function three");
+       }
+
+       funtwo();
+
+//____________________
+
+     // RETURN
+
+     function  funfour(){
+     	console.log(4);
+     }      
+
+     function funfive(){
+     	console.log(5);
+     }
+
+     function funsix(){
+     	// funfur();
+     	// funfive();
+     	// console.log("i am 6")
+
+     	const num1 = funfour();
+     	const num2 = funfive();
+     	console.log(num1);
+     	console.log(num2);
+     	const total = num1 + num2
+     	console.log(total); //result = Nan(Not a Number)
+     }
+     
+     funsix();
+
+ //______________ 
+     
+
+     // const num9 = "aung aung";
+     // console.log(num9);
+
+     //Note : 1 function 1 retrun (first in first out)
+
+    function funseven(){
+    	return 7;
+
+    	
+
+    	
+    }  
+
+     //console.log(funseven()) //calculation do
+
+     function funeight(){
+     	return 8;
+     }
+     // console.log(funeight());
+     // document.write(funeight());
+     // window.alert(funeight())
+
+     function funnine(){
+     	const num1 = funseven();
+     	const num2 = funeight();
+
+     	// console.log(num1);
+     	// console.log(num2);
+
+     	const total = num1+num2;
+     	// console.log(total)
+
+     	return total;
+     }
+     // funnine();
+
+     console.log(funnine());
+
+//_____________
+
+    // 2 Parameter Function
+
+    // i single Parameter Function
+
+    function myfun1(city){
+    	// console.log("Hello " + city);
+    	console.log(`Hello ${city}`)
+
+
+    }
+
+    myfun1("Yangon");
+    myfun1("Mandalay"); 
+    myfun1();
+
+    function myfun2(city="Bago"){
+    	console.log("Hello " + city);
+    }  
+    myfun2("Yangon");
+    myfun2("Mandalay");
+    myfun2();
+
+//____________
+
+
+   // ii. Multi Parameter Function
+
+
+   function multifun1(x=1,y=2,z=3){
+   	// console.log(`x value is${x} , y value is${y}, z value is ${z}`);
+
+   	let result =x+y+z;
+   	return result;
+
+   }
+   multifun1(10);
+   multifun1(10,20)
+   multifun1(10,20,30)
+
+console.log(multifun1(20,40,60));
+
+// console.log(multifun1())
+console.log(multifun1(10,20));
+
+let mytextfun = function text(){
+  console.log("Hello i am test function");
+
+
+}
+mytextfun();
+
+//________
+
+
+// 3 constructor function (by string)
+  
+
+ const confunone = new Function("j","k","l","return j+k+l");
+ console.log(confunone(10,20,30));
+
+ console.log(typeof confunone(10,20,30))
+
+ console.log(confunone("10","20","30"));
+ console.log(typeof confunone("10","20","30"));
+
+ console.log(confunone("aung aung","maung maung","kyaw kyaw"))
+
+ //________
+
+  // 4 Nameless function (Anonymour function)
+
+  let annfunone = function(name,color){
+    document.write(`my name is ${name}. i lover ${color} color.`)
+  }
+  annfunone("aung aung","black");
+  //________
+
+  // 5 Self Invoking Function
+
+     (function(){
+      console.log("Save Myanmar");
+     })();
+
+     (function(name){
+      console.log(`My name is ${name}`);
+     })("kyaw kyaw");
+
+
+//_______
+
+
+  function getdata(){
+    // console.log("hay i am working")
+
+    let getname = document.getElementById('name').value;
+    // console.log(getname);
+
+    // let getfullname = document.getElementById('fullname');
+    // console.log(getfullname)
+    // getfullname.innerText = getname;
+
+    // document.getElementById('fullname').innerText = getname;
+     // document.getElementById('fullname').textContent = getname;
+      document.getElementById('fullname').innerHTML = getname;
+
+  }
+
+
+
+
+
+
+
+      
+
+  </script>
+</body>
+</html>
+
+<!-- functionname(); -->
+
+
+<!-- function print(){
+	total = ???
+
+	vouchertosms();
+	vouchertoemail();
+}
+ -->
+<!-- 
+  function print(){
+	total = ???
+
+	if(package === "silver"){
+	vouchertoemail();
+}else if(package === "gold"){
+	vouchertoemail();
+	vocuhertosms();
+}else{
+	window.alert("do you want to upgrade ??");
+}
+}
+
+
+
+function vouchertosms(){
+	
+}
+function vouchertoemail(){
+	
+} -->

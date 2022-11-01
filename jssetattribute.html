@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Set Attribute</title>
+    </head>
+    <body>
+
+        <div>
+            <h1>Say Something</h1>
+            <p class="p1">I am Maung Maung 27 years old andm I live in mandalay. I have to elder brothers</p>
+
+            <p class="p2">I am Su Su 30 years old andm I live in Yangon. I have to elder brothers</p>
+        </div>
+        
+
+
+
+
+
+
+        <script type="text/javascript">
+        //  console.log(document.getElementsByTagName('h1'));
+        //  console.log(document.getElementsByTagName('p'));
+
+        let geth1tag = document.getElementsByTagName('h1');
+        let getptag = document.getElementsByTagName('p');
+
+        // geth1tag[0].textContent = "my story";
+        // getptag[1].innerText = "hay i am working";
+
+        geth1tag[0].setAttribute('style','text-align:center');
+        getptag[1].setAttribute('style','background-color:gray;color:#fff;padding:3px;border:2px solid green;');
+
+        console.log(getptag[1].getAttribute('style'));
+        console.log(getptag[0].getAttribute('class'));
+
+        getptag[1].removeAttribute('style');
+        getptag[0].removeAttribute('class');
+
+        
+            
+        </script>
+    </body>
+</html>
